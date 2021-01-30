@@ -1,0 +1,35 @@
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    color: $caption-color;
+    font-size: $caption;
+    padding: 10rem 0;
+    .col-lg-6 {
+        padding-left: 30px;
+    }
+    .logo-footer {
+        width: 60px;
+        opacity: 0.6;
+    }
+    .footer-list {
+        font-size: $caption;
+        padding: 0;
+        margin: 0;
+        li {
+            display: block;
+            margin-bottom: 0.5rem;
+            strong {
+                color: $text-color;
+                display: block;
+                margin-bottom: 1rem;
+                font-weight: $semibold;
+            }
+            a {
+                color: $caption-color;
+                &:hover {
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}

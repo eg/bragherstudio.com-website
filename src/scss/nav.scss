@@ -1,0 +1,121 @@
+.top-nav {
+    background: #fff;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: 0.3s ease-in-out;
+    top: 0;
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+.top-nav.active {
+    transition: 0.3s ease-in-out;
+    background: #fff;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.07);
+    .logo {
+        img {
+            transition: 0.3s ease-in-out;
+            transform: translate(0, 24px);
+        }
+    }
+}
+.logo {
+    display: block;
+    width: 110px;
+    position: relative;
+    z-index: 99;
+    &::before {
+        content: "";
+        background: $main-color;
+        display: block;
+        width: 100%;
+        height: 40px;
+        position: absolute;
+    }
+    img {
+        transition: 0.3s ease-in-out;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+}
+.menu-button {
+    display: none;
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    padding: 16px;
+    span {
+        background: $heading-color;
+        display: block;
+        height: 3px;
+        width: 24px;
+        border-radius: 20px;
+        margin: 5px 0;
+        position: absolute;
+        transition: .3s ease-in-out;
+        &:nth-child(1) {
+            top: 17px;
+            right: 16px;
+        }
+        &:nth-child(2) {
+            top: 26px;
+            right: 16px;
+        }
+    }
+
+}
+body.menu-open {
+    .menu-button {
+        span {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                top: 22px;
+            }
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+                top: 22px;
+            }
+        }
+    }
+}
+.navigation {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+    ul.menu {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        li {
+            display: block;
+            margin: 0px 30px;
+            font-weight: $medium;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: $text-color;
+                position: relative;
+                opacity: 0.7;
+                &:hover {
+                    opacity: 1;
+                    color: $heading-color;
+                }
+                &.active {
+                    color: $main-color;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

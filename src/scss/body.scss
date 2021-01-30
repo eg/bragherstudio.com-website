@@ -1,0 +1,37 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-size: $body-text;
+    line-height: 1.6rem;
+    letter-spacing: -0.02em;
+    color: $text-color;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+    background: rgba($main-color, 0.3);
+}
+::selection {
+    background: rgba($main-color, 0.3);
+}
+a {
+    transition: 0.2s all;
+    color: $main-color;
+    outline: 0 !important;
+    text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+    outline: 0 !important;
+    color: $main-color;
+    text-decoration: none;
+}
+
+#app {
+    background: #fff;
+    padding-top: 100px;
+}
